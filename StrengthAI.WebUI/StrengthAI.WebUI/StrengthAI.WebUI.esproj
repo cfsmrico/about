@@ -7,8 +7,4 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\StrengthAI.WebUI\</BuildOutputFolder>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove=".vscode\**" />
-    <TypeScriptConfiguration Remove=".vscode\**" />
-  </ItemGroup>
 </Project>
