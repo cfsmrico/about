@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TdeeComponent } from './tdee.component';
 
 describe('TdeeComponent', () => {
@@ -11,7 +10,7 @@ describe('TdeeComponent', () => {
       imports: [TdeeComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TdeeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
