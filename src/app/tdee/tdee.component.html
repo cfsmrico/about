@@ -1,1 +1,15 @@
-<p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City" />
+<div>
+    <p-selectButton
+      [options]='unitSystemOptions'
+      [(ngModel)]='unitSystem' />
+
+    <p-selectButton
+    [options]='sexOptions'
+    [(ngModel)]='sex' />
+
+<!--      Activity Level - Dropdown
+      Age - Spinner button
+      Body weight - Spinner button
+      Height - Spinner Button
+      Body fat (optional) - Spinner Button-->
+</div>
