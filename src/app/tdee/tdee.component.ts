@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { DropdownModule } from 'primeng/dropdown';
 
 @Component({
@@ -9,6 +10,7 @@ import { DropdownModule } from 'primeng/dropdown';
   imports: [
     RouterModule,
     FormsModule,
+    CommonModule,
     DropdownModule,
   ],
   templateUrl: './tdee.component.html',
