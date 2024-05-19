@@ -7,15 +7,49 @@
       [options]='sexOptions'
       [(ngModel)]='sex' />
 
+    <p-floatLabel>
+      <p-inputNumber
+      inputId="weightInput"
+      [(ngModel)]="weight"
+      [showButtons]="true"
+      [min]="2"
+      [max]="500" />
+      <label for="weightInput">Weight</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <p-inputNumber
+      inputId="heightInput"
+      [(ngModel)]="height"
+      [showButtons]="true"
+      [min]="2"
+      [max]="500" />
+      <label for="heightInput">Height</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <p-inputNumber
+      inputId="ageInput"
+      [(ngModel)]="age"
+      [showButtons]="true"
+      [min]="18"
+      [max]="80" />
+      <label for="ageInput">Age</label>
+    </p-floatLabel>
+
     <p-dropdown
       [options]="activityLevelOptions"
       [(ngModel)]="activityLevel"
-      placeHolder="Select an Activity Level"
+      placeholder="Select an Activity Level"
       optionLabel="label" />
 
-<!--      Activity Level - Dropdown
-      Age - Spinner button
-      Body weight - Spinner button
-      Height - Spinner Button
-      Body fat (optional) - Spinner Button-->
+      <p-floatLabel>
+        <p-inputNumber
+        inputId="boodyFatInput"
+        [(ngModel)]="bodyfat"
+        [showButtons]="true"
+        [min]="5"
+        [max]="50" />
+        <label for="bodyFatInput">Body fat %</label>
+      </p-floatLabel>
 </div>

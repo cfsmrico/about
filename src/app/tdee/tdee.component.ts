@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 interface ActivityLevel {
   label: string;
@@ -20,7 +22,9 @@ interface ActivityLevel {
     CommonModule,
     SelectButtonModule,
     ButtonModule,
-    DropdownModule
+    DropdownModule,
+    InputNumberModule,
+    FloatLabelModule
   ],
   templateUrl: './tdee.component.html',
   styleUrl: './tdee.component.css'
@@ -40,4 +44,8 @@ export class TdeeComponent {
     {label: 'Extra Active: very intense exercise daily, or physical job', level: 1.9}
   ];
   activityLevel: ActivityLevel | undefined;
+  weight: number | undefined;
+  height: number | undefined;
+  age: number | undefined;
+  bodyfat: number | undefined;
 };
