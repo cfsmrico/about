@@ -7,6 +7,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { CardModule } from 'primeng/card';
 
 interface ActivityLevel {
   label: string;
@@ -24,7 +25,8 @@ interface ActivityLevel {
     ButtonModule,
     DropdownModule,
     InputNumberModule,
-    FloatLabelModule
+    FloatLabelModule,
+    CardModule
   ],
   templateUrl: './tdee.component.html',
   styleUrl: './tdee.component.css'
@@ -44,8 +46,19 @@ export class TdeeComponent {
     {label: 'Extra Active: very intense exercise daily, or physical job', level: 1.9}
   ];
   activityLevel: ActivityLevel | undefined;
-  weight: number | undefined;
-  height: number | undefined;
-  age: number | undefined;
-  bodyfat: number | undefined;
+  weight: number = 90;
+  height: number = 181;
+  age: number = 40;
+  bodyfat: number = 15;
+  tdee: number = 2000;
+
+  getTdee() {
+    let bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
+
+    if (this.bodyfat == undefined) {
+      this.tdee = this.activityLevel ? bmr * this.activityLevel.level : bmr;
+    } else {
+      this.tdee = this.activityLevel ? bmr * this.activityLevel.level : bmr;
+    }
+  }
 };
