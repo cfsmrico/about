@@ -4,8 +4,14 @@
       [(ngModel)]='unitSystem' />
 
     <p-selectButton
-    [options]='sexOptions'
-    [(ngModel)]='sex' />
+      [options]='sexOptions'
+      [(ngModel)]='sex' />
+
+    <p-dropdown
+      [options]="activityLevelOptions"
+      [(ngModel)]="activityLevel"
+      placeHolder="Select an Activity Level"
+      optionLabel="label" />
 
 <!--      Activity Level - Dropdown
       Age - Spinner button
