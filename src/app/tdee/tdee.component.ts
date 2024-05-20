@@ -45,20 +45,23 @@ export class TdeeComponent {
     {label: 'Very Active: intense exercise 6-7 times/week', level: 1.725},
     {label: 'Extra Active: very intense exercise daily, or physical job', level: 1.9}
   ];
-  activityLevel: ActivityLevel | undefined;
+  activityLevel: ActivityLevel = {label: 'Moderate: exercise 4-5 times/week', level: 1.465};
   weight: number = 90;
   height: number = 181;
-  age: number = 40;
+  age: number = 42;
   bodyfat: number = 15;
-  tdee: number = 2000;
+  tdee: number = 2500;
 
-  getTdee() {
-    let bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
+  calcTDEE() {
+    let s = 5;
 
-    if (this.bodyfat == undefined) {
-      this.tdee = this.activityLevel ? bmr * this.activityLevel.level : bmr;
-    } else {
-      this.tdee = this.activityLevel ? bmr * this.activityLevel.level : bmr;
+    if (this.sex == 'Female') {
+      s = -151;
     }
+
+    let bmr = (10 * this.weight + 6.25 * this.height - 5 * this.age) + s;
+    let lbm = (1 - (this.bodyfat / 100)) * this.weight;
+    bmr = 370 + (21.6 * lbm);
+    this.tdee = bmr * this.activityLevel.level;
   }
 };
