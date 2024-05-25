@@ -48,6 +48,8 @@ export class TdeeComponent {
   activityLevel: ActivityLevel = {label: 'Moderate: exercise 4-5 times/week', level: 1.465};
   weight: number = 90;
   height: number = 181;
+  feet: number = 6;
+  inches: number = 0;
   age: number = 42;
   bodyfat: number = 15;
   tdee: number = 2500;
@@ -63,5 +65,12 @@ export class TdeeComponent {
     let lbm = (1 - (this.bodyfat / 100)) * this.weight;
     bmr = 370 + (21.6 * lbm);
     this.tdee = bmr * this.activityLevel.level;
+  }
+
+  // convers Imperial units to Metric
+  convertToMetric() {
+    this.weight = this.weight * 0.45359237
+    let totalInches = this.feet * 12 + this.inches;
+    this.height = totalInches * 2.54;
   }
 };

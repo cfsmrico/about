@@ -5,3 +5,4 @@ Ideal Bodyweight Calculator
 Plate Barbell Racking Calculator
 Classification Calculator (Powerlifting USPA)
 Bodyfat Estimation Calculator
+Imperial to Metric (and vice-versa)
