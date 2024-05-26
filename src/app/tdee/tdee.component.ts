@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormControl, FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, formatNumber, NgIf } from '@angular/common';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
@@ -10,7 +10,6 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { CheckboxModule } from 'primeng/checkbox';
-import { NgIf } from '@angular/common';
 
 interface ActivityLevel {
   label: string;
@@ -59,7 +58,7 @@ export class TdeeComponent {
   feet: number = 6;
   inches: number = 0;
   age: number = 42;
-  bodyfat: number = 15;
+  bodyfat: number = 14;
   tdee: number = 0;
   useBodyfat: boolean = true;
 
@@ -71,6 +70,7 @@ export class TdeeComponent {
       this.weight = this.weightKg;
     } else {
       this.weight = this.weightLbs;
+      this.convertToMetric();
     }
 
     if (this.useBodyfat) {

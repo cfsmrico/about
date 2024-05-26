@@ -73,6 +73,6 @@
     <br />
     <br />
     <p-button (click)="calcTDEE()">Calculate</p-button>
-    <p *ngIf="tdee != 0"> {{tdee}}</p>
+    <p *ngIf="tdee != 0"> {{tdee.toPrecision(4)}}</p>
     </p-card>
 </div>
