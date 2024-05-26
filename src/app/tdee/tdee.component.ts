@@ -52,18 +52,26 @@ export class TdeeComponent {
     {label: 'Extra Active: very intense exercise daily, or physical job', level: 1.9}
   ];
   activityLevel: ActivityLevel = {label: 'Active: daily exercise or intense exercise 3-4 times/week', level: 1.55};
-  weight: number = 90;
+  weight: number = 0;
+  weightKg: number = 90;
+  weightLbs: number = 200;
   height: number = 181;
   feet: number = 6;
   inches: number = 0;
   age: number = 42;
   bodyfat: number = 15;
-  tdee: number = 2500;
+  tdee: number = 0;
   useBodyfat: boolean = true;
 
   calcTDEE() {
     var lbm = 0;
     var bmr = 0;
+
+    if (this.unitSystem == 'Metric') {
+      this.weight = this.weightKg;
+    } else {
+      this.weight = this.weightLbs;
+    }
 
     if (this.useBodyfat) {
       lbm = (1 - (this.bodyfat / 100)) * this.weight;
