@@ -9,6 +9,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
+import { CheckboxModule } from 'primeng/checkbox';
+import { NgIf } from '@angular/common';
 
 interface ActivityLevel {
   label: string;
@@ -28,7 +30,9 @@ interface ActivityLevel {
     InputNumberModule,
     FloatLabelModule,
     CardModule,
-    PanelModule
+    PanelModule,
+    CheckboxModule,
+    NgIf
   ],
   templateUrl: './tdee.component.html',
   styleUrl: './tdee.component.css'
@@ -47,7 +51,7 @@ export class TdeeComponent {
     {label: 'Very Active: intense exercise 6-7 times/week', level: 1.725},
     {label: 'Extra Active: very intense exercise daily, or physical job', level: 1.9}
   ];
-  activityLevel: ActivityLevel = {label: 'Moderate: exercise 4-5 times/week', level: 1.465};
+  activityLevel: ActivityLevel = {label: 'Active: daily exercise or intense exercise 3-4 times/week', level: 1.55};
   weight: number = 90;
   height: number = 181;
   feet: number = 6;
@@ -55,17 +59,26 @@ export class TdeeComponent {
   age: number = 42;
   bodyfat: number = 15;
   tdee: number = 2500;
+  useBodyfat: boolean = true;
 
   calcTDEE() {
-    let s = 5;
+    var lbm = 0;
+    var bmr = 0;
 
-    if (this.sex == 'Female') {
-      s = -151;
+    if (this.useBodyfat) {
+      lbm = (1 - (this.bodyfat / 100)) * this.weight;
+      bmr = 370 + (21.6 * lbm);
+    } else {
+      let s = 5;
+
+      if (this.sex == 'Female') {
+        s = -151;
+      }
+
+      bmr = (10 * this.weight + 6.25 * this.height - 5 * this.age) + s;
+
     }
 
-    let bmr = (10 * this.weight + 6.25 * this.height - 5 * this.age) + s;
-    let lbm = (1 - (this.bodyfat / 100)) * this.weight;
-    bmr = 370 + (21.6 * lbm);
     this.tdee = bmr * this.activityLevel.level;
   }
 
