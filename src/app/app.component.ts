@@ -16,7 +16,7 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'cfsmrico.github.io';
+  title = 'Iron Brotherhood';
   items: MenuItem[] | undefined;
 
   ngOnInit() {
@@ -27,7 +27,13 @@ export class AppComponent implements OnInit {
       },
       {
         label: 'TDEE',
-        icon: 'pi pi-star'
+        icon: 'pi pi-star',
+        url: 'tdee'
+      },
+      {
+        label: 'FFMI',
+        icon: 'pi pi-star',
+        url: 'ffmi'
       }
     ]
   }
