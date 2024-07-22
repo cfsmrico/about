@@ -2,6 +2,7 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
+  output:'export',
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
@@ -15,7 +16,6 @@ const nextConfig = {
 
     return config;
   },
-  //output: "export",
   compress: true,
   generateEtags: true,
   pageExtensions: ['tsx', 'mdx', 'ts'],
@@ -25,6 +25,7 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
