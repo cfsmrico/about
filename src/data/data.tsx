@@ -89,7 +89,7 @@ export const aboutData: About = {
     {label: 'Location', text: 'Georgetown, Texas (Austin metro)', Icon: MapIcon},
     {label: 'Age', text: '42', Icon: CalendarIcon},
     {label: 'Nationality', text: 'American', Icon: FlagIcon},
-    {label: 'Interests', text: 'Family, powerlifting, gymnastics', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Family, gymnastics, powerlifting (Texas deadlift record-holder)', Icon: SparklesIcon},
     {label: 'Study', text: 'University of Texas at Austin, Texas State University', Icon: AcademicCapIcon},
     {label: 'Employment', text: 'Charles Schwab', Icon: BuildingOffice2Icon},
   ],
