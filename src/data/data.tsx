@@ -134,7 +134,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: '2020 - present',
+    date: '2021 - present',
     location: 'Charles Schwab',
     title: 'DevOps Team Lead',
     content: (
@@ -144,7 +144,7 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: '2016 - 2020',
+    date: '2016 - 2021',
     location: 'Charles Schwab',
     title: 'DevOps Developer',
     content: (
