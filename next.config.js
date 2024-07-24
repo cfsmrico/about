@@ -13,6 +13,16 @@ const nextConfig = {
       rule.include = undefined;
     });
 
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+    });
+
     return config;
   },
   compress: true,

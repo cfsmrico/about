@@ -13,6 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
+import resume from '../public/ChaneyFonsecaDevOpsLead.pdf';
 import {
   About,
   ContactSection,
@@ -68,7 +69,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '../images/ChaneyFonsecaDevOpsLead.pdf',
+      href: 'ChaneyFonsecaDevOpsLead.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
