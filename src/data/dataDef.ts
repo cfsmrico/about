@@ -74,16 +74,6 @@ export interface SkillGroup {
 }
 
 /**
- * Portfolio section
- */
-export interface PortfolioItem {
-  title: string;
-  description: string;
-  url: string;
-  image: string | StaticImageData;
-}
-
-/**
  * Resume section
  */
 export interface TimelineItem {

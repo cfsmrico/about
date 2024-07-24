@@ -13,14 +13,12 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
-import resume from '../public/ChaneyFonsecaDevOpsLead.pdf';
 import {
   About,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
   SkillGroup,
   Social,
   TimelineItem,
@@ -41,7 +39,6 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
@@ -89,9 +86,9 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `Bio`,
   aboutItems: [
-    {label: 'Location', text: 'Georgetown, TX (Austin metro)', Icon: MapIcon},
+    {label: 'Location', text: 'Georgetown, Texas (Austin metro)', Icon: MapIcon},
     {label: 'Age', text: '42', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Puerto Rican / Texan', Icon: FlagIcon},
+    {label: 'Nationality', text: 'American', Icon: FlagIcon},
     {label: 'Interests', text: 'Family, powerlifting, gymnastics', Icon: SparklesIcon},
     {label: 'Study', text: 'University of Texas at Austin, Texas State University', Icon: AcademicCapIcon},
     {label: 'Employment', text: 'Charles Schwab', Icon: BuildingOffice2Icon},
@@ -115,18 +112,6 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-];
-
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  //{
-  //  title: 'Project title 1',
-  //  description: 'Give a short description of your project here.',
-  //  url: 'https://github.com/cfsmrico/cfsmrico.github.io',
-  //  image: porfolioImage1,
-  //},
 ];
 
 /**
@@ -165,7 +150,7 @@ export const contact: ContactSection = {
     {
       type: ContactType.Location,
       text: 'Georgetown, Texas',
-      href: 'https://www.google.com/maps/place/',
+      href: 'https://www.google.com/maps/place/Georgetown,+TX/@30.6567877,-97.7913503,12z/data=!3m1!4b1!4m6!3m5!1s0x8644d5fd54dafbdf:0x61ec34de94c03a09!8m2!3d30.6332618!4d-97.6779842!16zL20vMDEwYzJn?entry=ttu',
     },
     {
       type: ContactType.Instagram,
