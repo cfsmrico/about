@@ -60,19 +60,18 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm an Austin-based <strong className="text-stone-100">full-stack engineer and devOps team lead</strong>, currently working
+        I'm an Austin-based <strong className="text-stone-100">devOps team lead</strong>, currently working
         at <strong className="text-stone-100">Charles Schwab</strong> facilitating software build and delivery.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">powerlifting</strong>,
-        gymnastics, <strong className="text-stone-100">chess</strong>, and loving my family{' '}
-        <strong className="text-stone-100">Respect</strong>.
+        In my free time time, I'm <strong className="text-stone-100">powerlifting</strong>, attempting
+        calisthenics, <strong className="text-stone-100"> playing online chess</strong>, and loving my family.{' '}
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '../images/ChaneyFonsecaDevOpsLead.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
