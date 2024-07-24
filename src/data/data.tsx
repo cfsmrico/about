@@ -108,7 +108,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Spanish',
-        level: 1,
+        level: 2,
       },
     ],
   },
@@ -119,24 +119,140 @@ export const skills: SkillGroup[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
+    date: '2008 - 2011',
     location: 'San Marcos',
     title: 'Masters in Computer Science',
-    content: <p>Describe</p>,
+    content: <p>Texas State University</p>,
+  },
+  {
+    date: '2001 - 2007',
+    location: 'Austin',
+    title: 'Bachelor of Arts in Philosophy',
+    content: <p>University of Texas at Austin</p>
   }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2015 - Present',
+    date: '2020 - present',
+    location: 'Charles Schwab',
+    title: 'DevOps Team Lead',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2016 - 2020',
     location: 'Charles Schwab',
     title: 'DevOps Developer',
     content: (
       <p>
-        Describe
+
       </p>
     ),
-  }
+  },
+  {
+    date: '2015 - 2016',
+    location: 'Randstad @ Charles Schwab',
+    title: 'DevOps Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2015',
+    location: 'Experis @ Dell',
+    title: 'Software Development Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2014 - 2015',
+    location: 'PureWRX',
+    title: 'Software Developer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2013 - 2014',
+    location: 'Bazaarvoice',
+    title: 'Software QA Automation Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2013',
+    location: 'InReach',
+    title: 'Software Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2012',
+    location: 'Apex Systems @ 3M',
+    title: 'Software Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2011 - 2012',
+    location: 'CGI Federal',
+    title: 'Consultant (Web Developer)',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2011 - 2011',
+    location: 'Texas Department of Transportation',
+    title: 'Summer IT Technician',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2009 - 2010',
+    location: 'Texas State University',
+    title: 'Graduate Instructional Assistant',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+    date: '2008',
+    location: 'Texas State University',
+    title: 'Computer Science Grader',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
 ];
 
 /**
@@ -144,8 +260,8 @@ export const experience: TimelineItem[] = [
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Todo',
+  headerText: 'Get in touch',
+  description: "TODO - have not hooked up SendGrid, yet",
   items: [
     {
       type: ContactType.Location,
