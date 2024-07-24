@@ -4,8 +4,6 @@
   "homepage": "https://chaney.vercel.app",
   "private": true,
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
     "build": "yarn compile && yarn next build",
     "clean": "rm -rf build-tsc .next",
     "compile": "yarn run -T tsc --build --verbose",
