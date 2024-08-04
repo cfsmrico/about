@@ -19,7 +19,7 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
-  SkillGroup,
+  ProjectItem,
   Social,
   TimelineItem,
 } from './dataDef';
@@ -40,7 +40,7 @@ export const SectionId = {
   About: 'about',
   Contact: 'contact',
   Resume: 'resume',
-  Skills: 'skills',
+  Projects: 'projects',
   Stats: 'stats',
 } as const;
 
@@ -91,21 +91,26 @@ export const aboutData: About = {
 };
 
 /**
- * Skills section
+ * Projects section
  */
-export const skills: SkillGroup[] = [
+export const projectItems: ProjectItem[] = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'Spanish',
-        level: 2,
-      },
-    ],
+    title: 'Project title 1',
+    description: 'Give a short description of your project here.',
+    url: 'https://reactresume.com',
+    image: '',
+  },
+  {
+    title: 'Project title 2',
+    description: 'Give a short description of your project here.',
+    url: 'https://reactresume.com',
+    image: '',
+  },
+  {
+    title: 'Project title 3',
+    description: 'Give a short description of your project here.',
+    url: 'https://reactresume.com',
+    image: '',
   },
 ];
 

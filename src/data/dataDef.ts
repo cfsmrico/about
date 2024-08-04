@@ -59,18 +59,14 @@ export interface Stat {
 }
 
 /**
- * Skills section
+ * Projects section
  */
 
-export interface Skill {
-  name: string;
-  level: number;
-  max?: number;
-}
-
-export interface SkillGroup {
-  name: string;
-  skills: Skill[];
+export interface ProjectItem {
+  title: string;
+  description: string;
+  url: string;
+  image: string | StaticImageData;
 }
 
 /**
